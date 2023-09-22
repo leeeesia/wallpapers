@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_main"
+    app:startDestination="@id/listCategoriesFragment">
+
+    <fragment
+        android:id="@+id/categoryFragment"
+        android:name="com.example.wallpapers.ui.CategoryFragment"
+        android:label="CategoryFragment" >
+        <action
+            android:id="@+id/action_categoryFragment_to_imageFragment"
+            app:destination="@id/imageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/listCategoriesFragment"
+        android:name="com.example.wallpapers.ui.ListCategoriesFragment"
+        android:label="ListCategoriesFragment" >
+        <action
+            android:id="@+id/action_listCategoriesFragment_to_categoryFragment"
+            app:destination="@id/categoryFragment" />
+        <action
+            android:id="@+id/action_listCategoriesFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/imageFragment"
+        android:name="com.example.wallpapers.ui.ImageFragment"
+        android:label="ImageFragment" />
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.example.wallpapers.ui.SettingsFragment"
+        android:label="SettingsFragment" />
+</navigation>
